@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Append or Prepend Multiple Elements in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var newHeading = "<h1>Important Note:</h1>";
+        var newParagraph = document.createElement("p");
+		newParagraph.innerHTML = "<em>Eka hapa some text...</em>";
+        var newImage = $('<img src="https://i.pinimg.com/236x/8b/a4/a2/8ba4a2bca7b3b40177afb6f072df9165--emojis-the-album.jpg" alt="Symbol">');
+        $("body").append(newHeading, newParagraph, newImage);
+    });
+});
+</script>
+</head>
+<style>
+	.button{
+		border:none;
+		color: white;
+		padding: 15px 32px;
+		text-align:center;
+		text-decoration: none;
+	display: inline-block;
+	font-size:16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+	.button1{
+		background-color: yellow;
+		color: black;
+  }
+  body{
+  	color: yellow;
+  	background-color: #390099;
+  }
+</style>
+<body>
+    <button class="button button1" type="button">Insert Content</button>
+  
+</body>
+</html>
